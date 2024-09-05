@@ -1,0 +1,25 @@
+.header {
+  height: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    color: var(--text);
+    img {
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.theme {
+  color: var(--text);
+}
