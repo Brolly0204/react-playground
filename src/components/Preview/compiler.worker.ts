@@ -100,3 +100,14 @@ function customResolver(files: Files): PluginObj {
     }
   }
 }
+
+self.addEventListener('message', async ({ data }) => {
+  try {
+      self.postMessage({
+          type: 'COMPILED_CODE',
+          data: compile(data)
+      })
+  } catch (e) {
+       self.postMessage({ type: 'ERROR', error: e })
+  }
+})
